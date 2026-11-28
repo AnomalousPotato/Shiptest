@@ -60,6 +60,7 @@
 
 	if(flesh_healing > 0) // now we actually reduce the damage
 		flesh_damage = max(0, flesh_damage - (0.5 * seconds_per_tick))
+		flesh_healing_decrement = max(0.1, flesh_healing_decrement) // shouldnt go below 0.2 but just to be safe
 		flesh_healing = max(0, flesh_healing - (flesh_healing_decrement * 0.5 * seconds_per_tick)) // good bandages multiply the length of flesh healing
 
 	// here's the check to see if we're cleared up
